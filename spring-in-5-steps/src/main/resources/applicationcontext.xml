@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean을 정의 합시다 @Component -->
+	<bean id="xmlJdbcConnection"
+		class="com.in28min.spring.basics.springin5steps.xml.XmlJdbcConnection">
+	</bean>
+
+	<bean id="xmlPersonDAO"
+		class="com.in28min.spring.basics.springin5steps.xml.XmlPersonDAO">
+		<!-- 종속성을 주입합시다 @Autowired -->
+		<property name="xmlJdbcConnection" ref="xmlJdbcConnection"/>
+	</bean>
+
+</beans>
