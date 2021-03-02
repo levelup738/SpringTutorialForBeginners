@@ -24,7 +24,6 @@ public class BinarySearchImpl {
 
 	public int binarySearch(int[] numbers, int num) {
 		int[] sortedNumbers = bubbleSortAlgorithm.sort(numbers);
-		System.out.println(bubbleSortAlgorithm);
 		return 3;
 	}
 	
